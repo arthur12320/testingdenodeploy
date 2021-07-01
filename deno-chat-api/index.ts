@@ -15,7 +15,7 @@ messages.push({
 
 const router = new Router();
 router
-  .get("/", (context):void => {
+  .get("/", (context) => {
     context.response.body = "chat server";
   })
   .get("/messages", (context):void => {
@@ -27,7 +27,6 @@ router
     context.response.body = messages;
   });
 
-const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
